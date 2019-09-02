@@ -1,0 +1,15 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:p="http://primefaces.org/ui">
+    <ui:composition>
+
+        <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide();"/>  
+
+        <p:dialog modal="true" widgetVar="statusDialog" resizable="false" draggable="false" closable="false">  
+            <p:graphicImage value="/resources/img/loading_logo_3d.gif" />
+        </p:dialog>
+    </ui:composition>
+
+</html>

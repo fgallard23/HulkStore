@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view contentType="text/html" locale="es">
+	<h:head>
+		<f:facet name="first">
+			<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+			<meta content="IE=11" http-equiv="X-UA-Compatible" />
+			<meta content="IE=10" http-equiv="X-UA-Compatible" />
+			<meta content="IE=9" http-equiv="X-UA-Compatible" />
+			<meta content="IE=8" http-equiv="X-UA-Compatible" />
+			<meta content="IE=7" http-equiv="X-UA-Compatible" />
+			<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+			<title>#{msg['app.tab.name']}</title>
+			<meta http-equiv="Expires" content="0" />
+			<meta http-equiv="Cache-Control"
+				content="no-cache, no-store, must-revalidate" />
+			<meta http-equiv="Pragma" content="no-cache" />
+			<h:outputStylesheet library="css" name="styleGeneral.css" />
+			<h:outputScript library="js" name="util.js" />			
+		</f:facet>
+	</h:head>
+	<h:body styleClass="body">
+		<!-- ******************** INICIO DEL CONTENIDO ******************** -->
+		<div id="container">
+			<ui:insert name="header">
+				<ui:include src="/templates/header.xhtml" />
+			</ui:insert>
+
+			<ui:insert name="popUp">
+				<ui:include src="/templates/status.xhtml" />
+			</ui:insert>
+
+			<center>
+
+				<div id="panelBase" class="panelBase">
+					<ui:include src="/templates/timeOut.xhtml" />
+					<ui:insert name="page-content" id="contenidoP" />
+				</div>
+
+				<div id="headerLineTop"></div>
+
+				<ui:insert name="bottom">
+					<ui:include src="/templates/bottom.xhtml" />
+					<ui:include src="/templates/navegacion.xhtml" />
+				</ui:insert>
+			</center>
+
+		</div>
+	</h:body>
+</f:view>
+</html>

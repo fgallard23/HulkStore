@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/templates/page-template.xhtml">
+
+	<ui:define name="page-content">
+
+		<p:layout fullPage="true">
+
+			<p:layoutUnit position="north" resizable="true" closable="true"
+				collapsible="true">
+                    Header
+                </p:layoutUnit>
+
+			<p:layoutUnit position="south" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>
+
+			<p:layoutUnit position="west" header="Left" collapsible="true">
+				<p:menu>
+					<p:submenu label="Menú">
+						<p:menuitem value="Productos"
+							url="http://localhost:8080/todo1.hulk.store-war/pages/hulkstore/products.xhtml" />
+						<p:menuitem value="Empleados"
+							url="http://localhost:8080/todo1.hulk.store-warb/pages/hulkstore/employee.xhtml" />
+					</p:submenu>
+				</p:menu>
+			</p:layoutUnit>
+
+			<p:layoutUnit position="center">
+				<h:form id="frmPrincipal">
+
+					<p:growl id="growl" showDetail="true" sticky="true" />
+
+					<p:panel header="Productos">
+						<p:panel header="Tipo Producto">
+							<p:panel header="Productos" rendered="">
+
+								<p:dataTable style="width: 100%;" var="pr" value=""
+									paginator="true" rows="10" id="dtProducto"
+									paginatorPosition="bottom">
+
+									<f:facet name="header">
+										<p:outputPanel>
+											<p:commandButton value="Agregar" action=""
+												icon="ui-icon-plusthick" title="Agregar Producto"
+												update="frmPrincipal"></p:commandButton>
+										</p:outputPanel>
+									</f:facet>
+
+									<p:column width="50" id="editar"
+										style="text-align: center; margin: 0 auto" headerText="Editar">
+										<p:commandButton action="" icon="ui-icon-pencil"
+											title="Editar">
+											<f:setPropertyActionListener value="" target="" />
+										</p:commandButton>
+									</p:column>
+
+									<p:column style="text-align: center; margin: 0 auto"
+										headerText="id">
+										<h:outputText value="" />
+									</p:column>
+									<p:column style="text-align: center; margin: 0 auto"
+										headerText="Nombre">
+										<h:outputText value="" />
+									</p:column>
+									<p:column style="text-align: center; margin: 0 auto"
+										headerText="Precio">
+										<h:outputText value="" />
+									</p:column>
+									<p:column style="text-align: center; margin: 0 auto"
+										headerText="Stock">
+										<h:outputText value="" />
+									</p:column>
+								</p:dataTable>
+							</p:panel>
+						</p:panel>
+					</p:panel>
+				</h:form>
+			</p:layoutUnit>
+		</p:layout>
+
+		<p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true"
+			height="100">
+			<h:outputText value="This is a Modal Dialog." />
+		</p:dialog>
+	</ui:define>
+</ui:composition>

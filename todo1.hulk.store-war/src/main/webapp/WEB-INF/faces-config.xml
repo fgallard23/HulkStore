@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+	version="2.1">
+
+	<factory>
+		<exception-handler-factory>todo1.hulk.store.session.ShowcaseExceptionHandlerFactory</exception-handler-factory>
+	</factory>
+
+	<application>
+	
+		<locale-config>
+			<default-locale>es</default-locale>
+		</locale-config>
+
+		<message-bundle>todo1.hulk.store.resources.validation</message-bundle>
+
+		<resource-bundle>
+			<base-name>todo1.hulk.store.resources.messages</base-name>
+			<var>msg</var>
+		</resource-bundle>
+		
+	</application>
+</faces-config>

@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<ui:composition>
+	<center>
+		<div style="width: 100%;">
+			<table style="width: 100%;">
+				<tr>
+					<td style="width: 45%; padding-left: 18%;"><p:graphicImage
+							library="img" name="logog.svg" /></td>
+					<td style="text-align: right; font-weight: bolder;">#{msg['etiqueta.mensaje.bienvenida']}</td>
+					<td style="font-weight: bolder;">#{loginControlador.usuario.nombre}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div style="width: 15%; padding-left: 75%;">
+			<table
+				style="width: 100%; background: #FFFFFF; border-top-left-radius: 10px; border-top-right-radius: 10px; text-align: center;">
+				<tr>
+					<td><p:commandLink action="/pages/principal.xhtml"
+							title="#{msg['etiqueta.comun.boton.home']}" immediate="true">
+							<p:graphicImage library="img" name="home.png"
+								style="width: 40px;  padding: 5px; border-color:#FFFFFF;" />
+						</p:commandLink> <p:commandLink actionListener="#{loginControlador.cerrarSesion}"
+							immediate="true" title="#{msg['etiqueta.comun.boton.salir']}">
+							<p:graphicImage library="img" name="salir.png"
+								style="width: 40px;  padding: 5px; border-color:#FFFFFF;" />
+						</p:commandLink></td>
+				</tr>
+			</table>
+		</div>
+	</center>
+</ui:composition>
+</html>
+

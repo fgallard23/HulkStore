@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<liberty-plugin-config>
+    <installDirectory>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\target\liberty\wlp</installDirectory>
+    <serverDirectory>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\target\liberty\wlp\usr\servers\todo1.hulk.storeServer</serverDirectory>
+    <userDirectory>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\target\liberty\wlp\usr</userDirectory>
+    <serverOutputDirectory>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\target\liberty\wlp\usr\servers\todo1.hulk.storeServer</serverOutputDirectory>
+    <serverName>todo1.hulk.storeServer</serverName>
+    <configFile>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\src\main\liberty\config\server.xml</configFile>
+    <appsDirectory>apps</appsDirectory>
+    <looseApplication>true</looseApplication>
+    <stripVersion>false</stripVersion>
+    <installAppPackages>project</installAppPackages>
+    <applicationFilename>todo1.hulk.store-ear.ear.xml</applicationFilename>
+    <assemblyArtifact>
+        <groupId>io.openliberty</groupId>
+        <artifactId>openliberty-runtime</artifactId>
+        <version>19.0.0.8</version>
+        <type>zip</type>
+    </assemblyArtifact>
+    <assemblyArchive>C:\SOURCE\repository\io\openliberty\openliberty-runtime\19.0.0.8\openliberty-runtime-19.0.0.8.zip</assemblyArchive>
+    <assemblyInstallDirectory>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\target\liberty</assemblyInstallDirectory>
+    <refresh>false</refresh>
+    <installAppsConfigDropins>C:\SOURCE\INFOENERGY\todo1.hulk.store\todo1.hulk.store-ear\target\liberty\wlp\usr\servers\todo1.hulk.storeServer\configDropins\defaults\install_apps_configuration_1491924271.xml</installAppsConfigDropins>
+    <projectType>ear</projectType>
+    <aggregatorParentId>todo1.hulk.store</aggregatorParentId>
+    <aggregatorParentBasedir>C:\SOURCE\INFOENERGY\todo1.hulk.store</aggregatorParentBasedir>
+    <projectCompileDependency>quiz.kardex:todo1.hulk.store-ejb:1.0.0</projectCompileDependency>
+    <projectCompileDependency>quiz.kardex:todo1.hulk.store-war:1.0.0</projectCompileDependency>
+</liberty-plugin-config>
